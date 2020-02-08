@@ -11,6 +11,9 @@ import javafx.scene.layout.StackPane;
 
 public class Controller {
 
+
+    //UTILISER LE MOUSEDRAG
+
     @FXML
     public StackPane mapMove;
     public StackPane tempoMap;
@@ -29,7 +32,7 @@ public class Controller {
     }
 
     public void dragEnteredMap(){
-        
+
 
     }
 
