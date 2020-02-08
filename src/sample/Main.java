@@ -17,8 +17,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{         //On utilise pas primaryStage, juste stage
-        getScenes()[0] = new Scene(FXMLLoader.load(getClass().getResource("menu.fxml")));
-        getScenes()[1] = new Scene(FXMLLoader.load(getClass().getResource("sample.fxml")));
+        getScenes()[0] = FXMLLoader.load(getClass().getResource("menu.fxml"));
+        getScenes()[1] = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
         numeroMode = 0;
         stage.setScene(getScenes()[numeroMode]);
