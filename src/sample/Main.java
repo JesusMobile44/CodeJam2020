@@ -17,7 +17,10 @@ public class Main extends Application {
         getScenes()[0] = FXMLLoader.load(getClass().getResource("menu.fxml"));
         getScenes()[1] = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
+
+
         Scene root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        root.getStylesheets().add("modena_dark.css");
         primaryStage.setTitle("Déneigement et Pollution");
         primaryStage.setScene(root);
 

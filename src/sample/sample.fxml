@@ -61,7 +61,7 @@
                </MenuBar>
             </top>
             <left>
-               <VBox alignment="BOTTOM_CENTER" prefHeight="1028.0" prefWidth="319.0" style="-fx-background-color: WHITE; -fx-border-color: BLACK;">
+               <VBox alignment="BOTTOM_CENTER" prefHeight="1028.0" prefWidth="319.0" style="-fx-border-color: WHITE;">
                   <children>
                      <Separator prefHeight="8.0" prefWidth="319.0" style="-fx-background-color: GRAY;" />
                      <ToggleButton fx:id="buttonTogglRoad" mnemonicParsing="false" onAction="#toggleRoadSelec" prefHeight="85.0" prefWidth="314.0" stylesheets="@styles.css" text="Road Placement" textAlignment="CENTER" textFill="WHITE">
@@ -75,7 +75,7 @@
                         </font>
                      </ToggleButton>
                      <Separator prefHeight="8.0" prefWidth="319.0" style="-fx-background-color: GRAY;" />
-                     <HBox prefHeight="74.0" prefWidth="316.0">
+                     <HBox prefHeight="74.0" prefWidth="316.0" style="-fx-background-color: WHITE;">
                         <children>
                            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Distance : ">
                               <font>
@@ -96,20 +96,20 @@
                         </VBox.margin>
                      </HBox>
                      <Separator prefHeight="8.0" prefWidth="319.0" style="-fx-background-color: GRAY;" />
-                     <HBox prefHeight="82.0" prefWidth="316.0">
+                     <VBox style="-fx-background-color: WHITE;">
                         <children>
                            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Consommation :">
                               <font>
                                  <Font size="44.0" />
                               </font>
                            </Text>
+                           <Text fx:id="distanceText1" strokeType="OUTSIDE" strokeWidth="0.0" text="0 L/100Km" textAlignment="RIGHT" wrappingWidth="311.193359375">
+                              <font>
+                                 <Font size="44.0" />
+                              </font>
+                           </Text>
                         </children>
-                     </HBox>
-                     <Text fx:id="distanceText1" strokeType="OUTSIDE" strokeWidth="0.0" text="0 L/100Km" textAlignment="RIGHT" wrappingWidth="311.193359375">
-                        <font>
-                           <Font size="44.0" />
-                        </font>
-                     </Text>
+                     </VBox>
                      <Separator prefHeight="8.0" prefWidth="319.0" style="-fx-background-color: GRAY;" />
                      <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="86.0" prefWidth="324.0" style="-fx-background-color: #28949c;" text="Simulate">
                         <font>
