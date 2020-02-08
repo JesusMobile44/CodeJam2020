@@ -16,36 +16,12 @@ public class Noeud extends ImageView{
 
     Image image;
     Tooltip tooltip;
+    Point2D point2D;
 
     public HashMap<String, Rue> getRues() {return rues;}
     public void etRues(HashMap<String, Rue> rues) {this.rues = rues;}
 
-    Noeud(){
-        this.tooltip.setText("Intersection");
-        this.setImage(Main.imagesContainer.get(0));
-
-        this.setOnMouseClicked(event -> {
-            //On connecte les deux points
-
-        });
-        this.setOnMouseEntered(event -> {
-            //Afficher le tooltip
-        });
-        this.setOnDragDetected(event -> {
-            Dragboard dragboard = this.startDragAndDrop(TransferMode.MOVE);
-            ClipboardContent contenu = new ClipboardContent();
-            contenu.putImage(this.getImage());
-            dragboard.setContent(contenu);
-        });
-        this.setOnDragOver(event ->{
-            event.acceptTransferModes(TransferMode.MOVE);
-        });
-        this.setOnDragDropped(event -> {
-            relocateToPoint(new Point2D(event.getSceneX(),event.getSceneY()));
-        });
-
-    }
-
+    
     public void relocateToPoint (Point2D p) {
 
         //relocates the object to a point that has been converted to

@@ -22,6 +22,7 @@ public class Controller {
     @FXML
     GridPane gridPane;
 
+
     public void dragDetectMap(Event event){
         Dragboard dragboard = mapMove.startDragAndDrop(TransferMode.MOVE);
         dragboard.setDragView(null);
