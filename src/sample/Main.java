@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Main extends Application {
@@ -19,6 +20,7 @@ public class Main extends Application {
     private static Scene[] scenes = new Scene[3];
 
     public static ArrayList<Image> imagesContainer = new ArrayList();
+    static Stage optStage = new Stage();
 
 
     @Override
@@ -26,6 +28,9 @@ public class Main extends Application {
         getScenes()[0] = FXMLLoader.load(getClass().getResource("menu.fxml"));
         getScenes()[1] = FXMLLoader.load(getClass().getResource("sample.fxml"));
         getScenes()[2] = FXMLLoader.load(getClass().getResource("sample720p.fxml"));
+
+        optStage.setScene(FXMLLoader.load(getClass().getResource("options.fxml")));
+
 
         getScenes()[0].getStylesheets().add("modena_dark.css");
         getScenes()[1].getStylesheets().add("modena_dark.css");
@@ -71,6 +76,10 @@ public class Main extends Application {
 
         stage.hide();
         stage.show();
+    }
+
+    public static void startOptions(){
+        optStage.show();
     }
 
 }

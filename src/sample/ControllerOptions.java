@@ -18,6 +18,19 @@ public class ControllerOptions {
     ChoiceBox resolutionsList;
     ChoiceBox themesList;
 
-    
+    public ChoiceBox getResolutionsList() {
+        return resolutionsList;
+    }
 
+    public ChoiceBox getThemesList() {
+        return themesList;
+    }
+
+    public ObservableList<String> getResolutions() {
+        return resolutions;
+    }
+
+    public ObservableList<String> getTheme() {
+        return theme;
+    }
 }
