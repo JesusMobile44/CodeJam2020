@@ -14,8 +14,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        getScenes()[0] = new Scene(FXMLLoader.load(getClass().getResource("menu.fxml")));
-        getScenes()[1] = new Scene(FXMLLoader.load(getClass().getResource("sample.fxml")));
+       /* getScenes()[0] = new Scene(FXMLLoader.load(getClass().getResource("menu.fxml")));
+        getScenes()[1] = new Scene(FXMLLoader.load(getClass().getResource("sample.fxml")));*/
 
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Déneigement et Pollution");
