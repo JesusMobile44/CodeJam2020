@@ -34,7 +34,6 @@ public class Main extends Application {
 
         getScenes()[0].getStylesheets().add("modena_dark.css");
         getScenes()[1].getStylesheets().add("modena_dark.css");
-        primaryStage.setTitle("Déneigement et Pollution");
 
         initializeImage();
 

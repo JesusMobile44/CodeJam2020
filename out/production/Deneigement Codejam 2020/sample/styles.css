@@ -1,13 +1,36 @@
 
 .toggle-button{
+    -fx-background-color: GRAY;
+    -fx-text-fill: WHITE;
+    -fx-border-color: WHITE;
     -fx-border-width: 2;
-    -fx-font: 28;
+    -fx-font: 27;
 }
 
 .toggle-button:selected{
     -fx-background-color: BLACK;
     -fx-text-fill: WHITE;
-    -fx-border-color:  #28949c;
+    -fx-border-color: DARKRED;
     -fx-border-width: 4;
-    -fx-font: 28;
+    -fx-font: 27;
+}
+
+
+#bill{
+    -fx-background-color: #13464a;
+    -fx-border-color: #050a0a;
+}
+
+
+.hbox{
+    -fx-background-color: #13464a;
+    -fx-border-color: #050a0a;
+}
+
+.borderpane{
+    -fx-background-color: #13464a;
+}
+
+.stackpane{
+    -fx-background-color: #13464a;
 }
