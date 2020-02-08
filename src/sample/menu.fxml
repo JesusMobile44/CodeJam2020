@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Scene xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerMenu">
+   <root>
+      <BorderPane prefHeight="400.0" prefWidth="600.0">
+         <center>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="PELLE-THÉ" textAlignment="CENTER" textFill="#28949c">
+                     <font>
+                        <Font size="57.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Button fx:id="StartButton" mnemonicParsing="false" onAction="#setStart" text="Démarrage">
+                     <font>
+                        <Font size="26.0" />
+                     </font></Button>
+                  <Button fx:id="OptionButton" mnemonicParsing="false" onAction="#optionsAction" text="Options">
+                     <font>
+                        <Font size="26.0" />
+                     </font></Button>
+                  <Button fx:id="QuitterButton" mnemonicParsing="false" onAction="#setQuit" text="Quitter">
+                     <font>
+                        <Font size="26.0" />
+                     </font></Button>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </root>
+</Scene>
