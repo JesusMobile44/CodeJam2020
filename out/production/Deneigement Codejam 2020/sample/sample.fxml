@@ -7,6 +7,7 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -26,19 +27,20 @@
             <center>
                <StackPane fx:id="mapMove" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onDragDetected="#dragDetectMap" onDragDone="#dragDoneMap" onDragDropped="#dragDropMap" onDragEntered="#dragEnteredMap" onDragExited="#dragExitMap" prefHeight="1054.0" prefWidth="1577.0" BorderPane.alignment="CENTER">
                   <children>
-                     <ImageView fitHeight="883.0" fitWidth="1584.0">
+                     <ImageView fx:id="iv" fitHeight="883.0" fitWidth="1584.0">
                         <image>
                            <Image url="@../../../../Pictures/Eglises%20jum.jpg" />
                         </image>
                      </ImageView>
-                     <Pane fx:id="pane" onMouseClicked="#mouseClickNode" />
+                     <Pane fx:id="paneRues" />
+                     <Pane fx:id="paneNoeuds" onMouseClicked="#mouseClickNode" />
                   </children>
                </StackPane>
             </center>
             <top>
                <MenuBar BorderPane.alignment="CENTER">
                  <menus>
-                   <Menu mnemonicParsing="false" text="File">
+                   <Menu mnemonicParsing="false" text="Fichier">
                      <items>
                            <MenuItem mnemonicParsing="false" text="Import Save" />
                            <MenuItem mnemonicParsing="false" text="Save" />
@@ -52,7 +54,7 @@
                        <MenuItem mnemonicParsing="false" text="Reset" />
                      </items>
                    </Menu>
-                   <Menu mnemonicParsing="false" text="Help">
+                   <Menu mnemonicParsing="false" text="Aide">
                      <items>
                        <MenuItem mnemonicParsing="false" text="About" />
                      </items>
@@ -61,33 +63,63 @@
                </MenuBar>
             </top>
             <left>
-               <VBox alignment="BOTTOM_CENTER" prefHeight="1028.0" prefWidth="319.0" style="-fx-background-color: WHITE; -fx-border-color: BLACK;">
+               <VBox alignment="BOTTOM_CENTER" minHeight="0.0" minWidth="0.0" prefHeight="1028.0" prefWidth="319.0" style="-fx-border-color: WHITE;">
                   <children>
-                     <Separator prefHeight="8.0" prefWidth="319.0" style="-fx-background-color: GRAY;" />
-                     <ToggleButton fx:id="buttonTogglRoad" mnemonicParsing="false" onAction="#toggleRoadSelec" prefHeight="85.0" prefWidth="314.0" stylesheets="@styles.css" text="Road Placement" textAlignment="CENTER" textFill="WHITE">
+                     <Separator prefHeight="8.0" prefWidth="200.0" />
+                     <ImageView fitHeight="268.0" fitWidth="317.0" pickOnBounds="true" preserveRatio="true" />
+                     <Separator prefHeight="2.0" prefWidth="318.0" />
+                     <Button mnemonicParsing="false" prefHeight="85.0" prefWidth="316.0" text="Changer de Véhicule">
+                        <font>
+                           <Font size="28.0" />
+                        </font>
+                     </Button>
+                     <Separator prefHeight="8.0" prefWidth="200.0" />
+                     <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                        <children>
+                           <Text fill="#28949c" strokeType="OUTSIDE" strokeWidth="0.0" text="Échelle (m) : " wrappingWidth="170.93669509887695">
+                              <font>
+                                 <Font size="28.0" />
+                              </font>
+                           </Text>
+                           <TextField prefHeight="66.0" prefWidth="140.0">
+                              <font>
+                                 <Font size="28.0" />
+                              </font>
+                           </TextField>
+                        </children>
+                     </HBox>
+                     <Separator prefHeight="8.0" prefWidth="200.0" />
+                     <Button mnemonicParsing="false" prefHeight="85.0" prefWidth="316.0" text="Importer une Map">
+                        <font>
+                           <Font size="28.0" />
+                        </font>
+                     </Button>
+                     <Separator prefHeight="8.0" prefWidth="200.0" />
+                     <ToggleButton fx:id="buttonTogglRoad" mnemonicParsing="false" onAction="#toggleRoadSelec" prefHeight="85.0" prefWidth="316.0" stylesheets="@styles.css" text="Placer une Rue" textAlignment="CENTER" textFill="WHITE">
                         <font>
                            <Font size="27.0" />
                         </font>
                      </ToggleButton>
-                     <ToggleButton fx:id="buttonToggleNode" mnemonicParsing="false" onAction="#toggleNodeSelect" prefHeight="85.0" prefWidth="314.0" stylesheets="@styles.css" text="Node Placement" textAlignment="CENTER" textFill="WHITE">
+                     <Separator prefHeight="8.0" prefWidth="319.0" />
+                     <ToggleButton fx:id="buttonToggleNode" mnemonicParsing="false" onAction="#toggleNodeSelect" prefHeight="85.0" prefWidth="316.0" stylesheets="@styles.css" text="Placer une Intersection" textAlignment="CENTER" textFill="WHITE">
                         <font>
                            <Font size="27.0" />
                         </font>
                      </ToggleButton>
-                     <Separator prefHeight="8.0" prefWidth="319.0" style="-fx-background-color: GRAY;" />
+                     <Separator prefHeight="8.0" prefWidth="319.0" />
                      <HBox prefHeight="74.0" prefWidth="316.0">
                         <children>
-                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Distance : ">
+                           <Text fill="#28949c" strokeType="OUTSIDE" strokeWidth="0.0" text="Distance : ">
                               <font>
-                                 <Font size="44.0" />
+                                 <Font size="40.0" />
                               </font>
                               <HBox.margin>
                                  <Insets />
                               </HBox.margin>
                            </Text>
-                           <Text fx:id="distanceText" strokeType="OUTSIDE" strokeWidth="0.0" text="0 Km">
+                           <Text fx:id="distanceText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="0 Km">
                               <font>
-                                 <Font size="44.0" />
+                                 <Font size="40.0" />
                               </font>
                            </Text>
                         </children>
@@ -95,28 +127,28 @@
                            <Insets />
                         </VBox.margin>
                      </HBox>
-                     <Separator prefHeight="8.0" prefWidth="319.0" style="-fx-background-color: GRAY;" />
-                     <HBox prefHeight="82.0" prefWidth="316.0">
+                     <Separator prefHeight="8.0" prefWidth="319.0" />
+                     <VBox>
                         <children>
-                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Consommation :">
+                           <Text fill="#28949c" strokeType="OUTSIDE" strokeWidth="0.0" text="Consommation :" wrappingWidth="318.3984375">
                               <font>
-                                 <Font size="44.0" />
+                                 <Font size="40.0" />
+                              </font>
+                           </Text>
+                           <Text fx:id="distanceText1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="0 L/100Km" textAlignment="RIGHT" wrappingWidth="311.193359375">
+                              <font>
+                                 <Font size="40.0" />
                               </font>
                            </Text>
                         </children>
-                     </HBox>
-                     <Text fx:id="distanceText1" strokeType="OUTSIDE" strokeWidth="0.0" text="0 L/100Km" textAlignment="RIGHT" wrappingWidth="311.193359375">
-                        <font>
-                           <Font size="44.0" />
-                        </font>
-                     </Text>
-                     <Separator prefHeight="8.0" prefWidth="319.0" style="-fx-background-color: GRAY;" />
-                     <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="86.0" prefWidth="324.0" style="-fx-background-color: #28949c;" text="Simulate">
+                     </VBox>
+                     <Separator prefHeight="8.0" prefWidth="319.0" />
+                     <Button alignment="BOTTOM_CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="316.0" style="-fx-background-color: #28949c;" text="Simuler">
                         <font>
                            <Font size="35.0" />
                         </font>
                      </Button>
-                     <Separator prefHeight="8.0" prefWidth="319.0" style="-fx-background-color: GRAY;" />
+                     <Separator prefHeight="8.0" prefWidth="200.0" />
                   </children>
                </VBox>
             </left>

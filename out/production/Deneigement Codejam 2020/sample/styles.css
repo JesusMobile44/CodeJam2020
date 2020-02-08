@@ -1,16 +1,13 @@
 
 .toggle-button{
-    -fx-background-color: GRAY;
-    -fx-text-fill: WHITE;
-    -fx-border-color: WHITE;
     -fx-border-width: 2;
-    -fx-font: 27;
+    -fx-font: 28;
 }
 
 .toggle-button:selected{
     -fx-background-color: BLACK;
     -fx-text-fill: WHITE;
-    -fx-border-color: DARKRED;
+    -fx-border-color:  #28949c;
     -fx-border-width: 4;
-    -fx-font: 27;
+    -fx-font: 28;
 }

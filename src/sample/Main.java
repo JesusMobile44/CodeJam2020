@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -24,6 +25,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{         //On utilise pas primaryStage, juste stage
         getScenes()[0] = FXMLLoader.load(getClass().getResource("menu.fxml"));
         getScenes()[1] = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        getScenes()[2] = FXMLLoader.load(getClass().getResource("sample720p.fxml"));
 
         getScenes()[0].getStylesheets().add("modena_dark.css");
         getScenes()[1].getStylesheets().add("modena_dark.css");

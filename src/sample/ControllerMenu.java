@@ -2,6 +2,7 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
 public class ControllerMenu {
     @FXML
@@ -12,5 +13,11 @@ public class ControllerMenu {
     }
     public void setQuit(){
         System.exit(0);
+    }
+
+    Stage selectionResolution = new Stage();
+
+    public void optionsAction(){
+
     }
 }
