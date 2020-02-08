@@ -1,6 +1,8 @@
 package sample;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.ContextMenu;
+import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.*;
@@ -33,7 +35,8 @@ public class Controller {
     public StackPane tempoMap;
     public ToggleButton buttonTogglRoad;
     public ToggleButton buttonToggleNode;
-    public Pane pane;
+    public Pane paneNoeuds;
+    public Pane paneRues;
 
     private int nbNoeudSelect = 0;
 
@@ -41,11 +44,11 @@ public class Controller {
     public void mouseClickNode(MouseEvent event){
         if (event.getButton().equals(MouseButton.PRIMARY)){
             if(buttonToggleNode.isSelected()) {
-                Noeud noeud = new Noeud(buttonToggleNode,buttonTogglRoad,pane);
+                Noeud noeud = new Noeud(buttonToggleNode,buttonTogglRoad,paneNoeuds);
                 noeud.setX(event.getX()-16);
                 noeud.setY(event.getY()-16);
                 noeud.setImage(Main.imagesContainer.get(1));
-                pane.getChildren().add(noeud);
+                paneNoeuds.getChildren().add(noeud);
             }
         }
     }
