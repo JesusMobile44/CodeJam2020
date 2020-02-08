@@ -24,16 +24,20 @@ public class Controller {
     public ToggleButton buttonToggleNode;
     public Pane pane;
 
+    private int nbNoeudSelect = 0;
+
     public void importMap(){}
 
     public void mouseClickNode(MouseEvent event){
-        if(buttonToggleNode.isSelected()) {
-            Point2D coord = new Point2D(event.getX(), event.getY());
+        if (event.getButton().equals(MouseButton.PRIMARY)){
+            if(buttonToggleNode.isSelected()) {
+                Noeud noeud = new Noeud(buttonToggleNode,buttonTogglRoad,pane);
+                noeud.setX(event.getX()-16);
+                noeud.setY(event.getY()-16);
+                noeud.setImage(Main.imagesContainer.get(0));
+                pane.getChildren().add(noeud);
+            }
         }
-        /*Circle circle = new Circle(10);
-        circle.setCenterX(coord.getX());
-        circle.setCenterY(coord.getY());
-        pane.getChildren().add(circle);*/
     }
 
     public void toggleRoadSelec(){

@@ -25,6 +25,8 @@ public class Main extends Application {
         getScenes()[0] = FXMLLoader.load(getClass().getResource("menu.fxml"));
         getScenes()[1] = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
+        initializeImage();
+
         numeroMode = 0;
         stage.setScene(getScenes()[numeroMode]);
 
