@@ -1,6 +1,5 @@
 package sample;
 
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -26,7 +25,12 @@ public class Main extends Application {
         getScenes()[0] = FXMLLoader.load(getClass().getResource("menu.fxml"));
         getScenes()[1] = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
-        initializeImage();
+
+
+        Scene root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        root.getStylesheets().add("modena_dark.css");
+        primaryStage.setTitle("Déneigement et Pollution");
+        primaryStage.setScene(root);
 
         numeroMode = 0;
         stage.setScene(getScenes()[numeroMode]);
