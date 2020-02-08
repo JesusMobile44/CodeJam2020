@@ -22,6 +22,8 @@ public class Noeud extends ImageView{
 
     Noeud(){
         this.tooltip.setText("Intersection");
+        this.setImage(Main.imagesContainer.get(0));
+
         this.setOnMouseClicked(event -> {
             //On connecte les deux points
 

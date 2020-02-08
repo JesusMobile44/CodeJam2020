@@ -7,6 +7,7 @@ import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.MouseDragEvent;
 import javafx.scene.input.TransferMode;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 
 public class Controller {
@@ -17,6 +18,9 @@ public class Controller {
     @FXML
     public StackPane mapMove;
     public StackPane tempoMap;
+
+    @FXML
+    GridPane gridPane;
 
     public void dragDetectMap(Event event){
         Dragboard dragboard = mapMove.startDragAndDrop(TransferMode.MOVE);
@@ -39,5 +43,8 @@ public class Controller {
     public void dragExitMap(){
 
 
+    }
+    public void initialize(){
+        gridPane.add(new Noeud(),0,0);
     }
 }

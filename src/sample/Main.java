@@ -4,7 +4,10 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
+
+import java.util.ArrayList;
 
 public class Main extends Application {
 
@@ -14,10 +17,13 @@ public class Main extends Application {
 
     private static Scene[] scenes = new Scene[3];
 
+    public static ArrayList<Image> imagesContainer = new ArrayList();
+
+
     @Override
     public void start(Stage primaryStage) throws Exception{         //On utilise pas primaryStage, juste stage
-        getScenes()[0] = new Scene(FXMLLoader.load(getClass().getResource("menu.fxml")));
-        getScenes()[1] = new Scene(FXMLLoader.load(getClass().getResource("sample.fxml")));
+        getScenes()[0] = FXMLLoader.load(getClass().getResource("menu.fxml"));
+        getScenes()[1] = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
         numeroMode = 0;
         stage.setScene(getScenes()[numeroMode]);
@@ -31,6 +37,9 @@ public class Main extends Application {
         stage.show();
     }
 
+    public static void initializeImage(){
+        imagesContainer.add(new Image("image/imageNode.png"));
+    }
 
     public static void main(String[] args) {
         launch(args);

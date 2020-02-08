@@ -5,7 +5,6 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -71,7 +70,7 @@
                      </MenuBar>
                   </top>
                   <left>
-                     <GridPane style="-fx-border-color: BLACK; -fx-background-color: WHITE;" BorderPane.alignment="CENTER">
+                     <GridPane fx:id="gridPane" style="-fx-border-color: BLACK; -fx-background-color: WHITE;" BorderPane.alignment="CENTER">
                        <columnConstraints>
                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
