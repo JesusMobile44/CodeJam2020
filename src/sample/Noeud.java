@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.scene.Scene;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.ToggleButton;
@@ -47,89 +48,70 @@ public class Noeud extends ImageView{
     }
 
     Noeud(ToggleButton buttonToggleNode,ToggleButton buttonToggleRoad, Pane paneN, Pane paneR){
-        this.setOnMouseClicked(event -> {
-            if (buttonToggleNode.isSelected() && event.getButton().equals(MouseButton.SECONDARY)){
-                paneN.getChildren().remove(this);
-            }
-            else if (buttonToggleRoad.isSelected()){
-                if (!this.selected){
-                    this.selected = true;
-                    this.setImage(Main.imagesContainer.get(2));
-                    if (Main.oneSelected){
-                        Line trait = new Line();
-                        trait.setStartX(Main.x+16);
-                        trait.setStartY(Main.y+16);
-                        trait.setEndX(this.getX()+16);
-                        trait.setEndY(this.getY()+16);
-                        trait.setStrokeWidth(8);
-
-                        Rue road = new Rue();
-                        road.setLongueur(longueurDeLigne(trait));
-                        road.setTrait(trait);
-                        paneR.getChildren().add(road.trait);
-                        this.getRuesParNoeud().add(road);
-                        Main.oneSelected = false;
-                        Main.x = 0;
-                        Main.y = 0;
-                        this.setImage(Main.imagesContainer.get(1));
-                        this.selected = false;
-                        Main.tempNode.setImage(Main.imagesContainer.get(1));
-                        Main.tempNode.selected = false;
-
-                    }
-                    else{
-                        Main.oneSelected = true;
-                        Main.x = this.getX();
-                        Main.y = this.getY();
-                        Main.tempNode = this;
-                    }
-                }
-                else{
-                    this.selected = false;
-                    this.setImage(Main.imagesContainer.get(1));
-                    Main.oneSelected = false;
-                    Main.x = 0;
-                    Main.y = 0;
-                }
-
-    public void delete(Pane pane){
-        pane.getChildren().remove(this);
-    }
-
-    public void select(){
-        if (!this.selected){
-            this.selected = true;
-            this.setImage(Main.imagesContainer.get(2));
-        }
-        else{
-            this.selected = false;
-            this.setImage(Main.imagesContainer.get(1));
-        }
-    }
-
-    Noeud(ToggleButton buttonToggleNode,ToggleButton buttonToggleRoad, Pane pane){
-
+/*
         ContextMenu contextMenu = new ContextMenu();
         MenuItem delete = new MenuItem();
         MenuItem select = new MenuItem();
-        delete.setOnAction(event -> delete(pane));
+        delete.setOnAction(event -> delete(paneR, paneN));
         delete.setText("Delete");
-        select.setOnAction(event -> select());
+        select.setOnAction(event -> select(paneR));
         select.setText("Select");
         contextMenu.getItems().addAll(select,delete);
 
         this.setOnContextMenuRequested(event -> {
-            contextMenu.show(this, event.getX(),event.getY());
+            contextMenu.show(this, event.getSceneX(),event.getSceneY());
         });
-
+*/
         this.setOnMouseClicked(event -> {
-            if (buttonToggleNode.isSelected() && event.getButton().equals(MouseButton.SECONDARY)){
-                contextMenu.show(this,this.getX(),this.getY());
+            if (buttonToggleNode.isSelected() && event.getButton().equals(MouseButton.SECONDARY)) {
+                delete(paneN);
             }
-            else if (buttonToggleRoad.isSelected()){
-                select();
+            else if (buttonToggleRoad.isSelected()&& event.getButton().equals(MouseButton.PRIMARY)) {
+                select(paneR);
             }
         });
     }
+    public void delete(Pane paneN){
+        paneN.getChildren().remove(this);
+    }
 
+    public void select(Pane paneR){
+        if (!this.selected) {
+            this.selected = true;
+            this.setImage(Main.imagesContainer.get(2));
+            if (Main.oneSelected) {
+                Line trait = new Line();
+                trait.setStartX(Main.x + 16);
+                trait.setStartY(Main.y + 16);
+                trait.setEndX(this.getX() + 16);
+                trait.setEndY(this.getY() + 16);
+                trait.setStrokeWidth(8);
+
+                Rue road = new Rue();
+                road.setLongueur(longueurDeLigne(trait));
+                road.setTrait(trait);
+                paneR.getChildren().add(road.trait);
+                this.getRuesParNoeud().add(road);
+                Main.oneSelected = false;
+                Main.x = 0;
+                Main.y = 0;
+                this.setImage(Main.imagesContainer.get(1));
+                this.selected = false;
+                Main.tempNode.setImage(Main.imagesContainer.get(1));
+                Main.tempNode.selected = false;
+
+            } else {
+                Main.oneSelected = true;
+                Main.x = this.getX();
+                Main.y = this.getY();
+                Main.tempNode = this;
+            }
+        } else {
+            this.selected = false;
+            this.setImage(Main.imagesContainer.get(1));
+            Main.oneSelected = false;
+            Main.x = 0;
+            Main.y = 0;
+        }
+    }
 }

@@ -54,12 +54,14 @@ public class Controller {
     }
 
     public void toggleRoadSelec(){
-        if(buttonToggleNode.isSelected())
+        if(buttonToggleNode.isSelected()){
             buttonToggleNode.setSelected(false);
+        }
     }
     public void toggleNodeSelect(){
-        if(buttonTogglRoad.isSelected())
+        if(buttonTogglRoad.isSelected()){
             buttonTogglRoad.setSelected(false);
+        }
     }
 
     public void dragDetectMap(Event event){
