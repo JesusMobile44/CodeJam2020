@@ -31,9 +31,10 @@
       </MenuBar>
    </top>
    <left>
-      <SplitPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <SplitPane dividerPositions="0.5" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <items>
             <Button mnemonicParsing="false" onAction="#importMap" text="load map" />
+            <Button mnemonicParsing="false" onAction="#inputNode" text="asas" />
          </items></SplitPane>
    </left>
    <center>
