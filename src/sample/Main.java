@@ -21,6 +21,8 @@ public class Main extends Application {
         primaryStage.setTitle("Déneigement et Pollution");
         primaryStage.setScene(root);
 
+
+
         primaryStage.setResizable(true);
         primaryStage.setMaximized(false);
         primaryStage.setMinHeight(650);
