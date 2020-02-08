@@ -1,16 +1,9 @@
 package sample;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
-import javafx.geometry.Point2D;
-import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.Tooltip;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.ClipboardContent;
-import javafx.scene.input.Dragboard;
 import javafx.scene.input.MouseButton;
-import javafx.scene.input.TransferMode;
 import javafx.scene.layout.Pane;
 
 import java.util.HashMap;
@@ -42,10 +35,11 @@ public class Noeud extends ImageView{
             else if (buttonToggleRoad.isSelected()){
                 if (!this.selected){
                     this.selected = true;
-
+                    this.setImage(Main.imagesContainer.get(2));
                 }
                 else{
                     this.selected = false;
+                    this.setImage(Main.imagesContainer.get(1));
                 }
             }
         });

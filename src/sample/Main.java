@@ -1,5 +1,6 @@
 package sample;
 
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -41,6 +42,8 @@ public class Main extends Application {
 
     public static void initializeImage(){
         imagesContainer.add(new Image("image/imageNode.png"));
+        imagesContainer.add(new Image("image/imageNodeBleu.png"));
+        imagesContainer.add(new Image("image/imageNodeRouge.png"));
     }
 
     public static void main(String[] args) {

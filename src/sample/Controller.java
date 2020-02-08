@@ -1,18 +1,29 @@
 package sample;
 
-import javafx.event.Event;
-import javafx.event.EventTarget;
 import javafx.fxml.FXML;
-import javafx.geometry.Point2D;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.*;
+import javafx.stage.FileChooser;
+import java.io.File;
+import javafx.event.Event;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
-import javafx.scene.input.*;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
-import javafx.scene.shape.Circle;
 
 public class Controller {
 
+    @FXML
+    public ImageView iv;
+
+    public void importMap(){
+        FileChooser fc = new FileChooser();
+        fc.setTitle("Veuillez sélectionner un fichier");
+        File fichier = fc.showOpenDialog(null);
+        Image map = new Image(fichier.toURI().toString());
+        iv.setImage(map);
+    }
 
     //UTILISER LE MOUSEDRAG
 
@@ -26,7 +37,6 @@ public class Controller {
 
     private int nbNoeudSelect = 0;
 
-    public void importMap(){}
 
     public void mouseClickNode(MouseEvent event){
         if (event.getButton().equals(MouseButton.PRIMARY)){
@@ -34,7 +44,7 @@ public class Controller {
                 Noeud noeud = new Noeud(buttonToggleNode,buttonTogglRoad,pane);
                 noeud.setX(event.getX()-16);
                 noeud.setY(event.getY()-16);
-                noeud.setImage(Main.imagesContainer.get(0));
+                noeud.setImage(Main.imagesContainer.get(1));
                 pane.getChildren().add(noeud);
             }
         }
@@ -72,6 +82,8 @@ public class Controller {
 
 
     }
-    public void initialize(){
+    public void inputStreet(){
+
     }
+
 }
