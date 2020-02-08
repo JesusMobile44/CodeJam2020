@@ -7,9 +7,10 @@ public class ControllerMenu {
     @FXML
     Button StartButton, OptionButton, QuitterButton;
 
-    public void setStartButton(Button startButton) {
-        StartButton = startButton;
+    public void setStart(){
+        Main.changerDeMode(1);
     }
-
-    
+    public void setQuit(){
+        System.exit(0);
+    }
 }

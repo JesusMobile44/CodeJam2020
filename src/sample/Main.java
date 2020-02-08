@@ -9,26 +9,27 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    private static Stage stage= new Stage();
 
+    public static int numeroMode;
 
-    private static Scene[] scenes = new Scene[2];
+    private static Scene[] scenes = new Scene[3];
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception{         //On utilise pas primaryStage, juste stage
         getScenes()[0] = new Scene(FXMLLoader.load(getClass().getResource("menu.fxml")));
         getScenes()[1] = new Scene(FXMLLoader.load(getClass().getResource("sample.fxml")));
 
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Déneigement et Pollution");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        numeroMode = 0;
+        stage.setScene(getScenes()[numeroMode]);
 
-        primaryStage.setResizable(true);
-        primaryStage.setMaximized(false);
-        primaryStage.setMinHeight(650);
-        primaryStage.setMinWidth(650);
-
+        stage.setTitle("Déneigement et Pollution");
+        stage.setResizable(true);
+        stage.setMaximized(false);
+        stage.setMinHeight(650);
+        stage.setMinWidth(650);
         
-        primaryStage.show();
+        stage.show();
     }
 
 
@@ -40,7 +41,18 @@ public class Main extends Application {
         return scenes;
     }
 
-    public static void setScenes(Scene[] scenes) {
-        Main.scenes = scenes;
+    public static Stage getStage() {
+        return stage;
     }
+
+    public static void changerDeMode(int mode){
+        stage.setScene(Main.getScenes()[mode]);
+        stage.setResizable(true);
+
+        numeroMode = mode;
+
+        stage.hide();
+        stage.show();
+    }
+
 }
