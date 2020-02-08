@@ -1,31 +1,21 @@
 package sample;
 
-
-import javafx.embed.swing.SwingFXUtils;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.*;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
-
-import javax.imageio.ImageIO;
 import java.io.File;
-
 import javafx.event.Event;
-import javafx.event.EventTarget;
-import javafx.fxml.FXML;
+import javafx.scene.control.ToggleButton;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 
 public class Controller {
+
     @FXML
     public ImageView iv;
-    @FXML
-    public Circle node1;
-    @FXML
-    public Circle node2;
 
     public void importMap(){
         FileChooser fc = new FileChooser();
@@ -35,13 +25,39 @@ public class Controller {
         iv.setImage(map);
     }
 
-
-
     //UTILISER LE MOUSEDRAG
 
     @FXML
     public StackPane mapMove;
+    public ToggleGroup toggles = new ToggleGroup();
     public StackPane tempoMap;
+    public ToggleButton buttonTogglRoad;
+    public ToggleButton buttonToggleNode;
+    public Pane pane;
+
+    private int nbNoeudSelect = 0;
+
+
+    public void mouseClickNode(MouseEvent event){
+        if (event.getButton().equals(MouseButton.PRIMARY)){
+            if(buttonToggleNode.isSelected()) {
+                Noeud noeud = new Noeud(buttonToggleNode,buttonTogglRoad,pane);
+                noeud.setX(event.getX()-16);
+                noeud.setY(event.getY()-16);
+                noeud.setImage(Main.imagesContainer.get(1));
+                pane.getChildren().add(noeud);
+            }
+        }
+    }
+
+    public void toggleRoadSelec(){
+        if(buttonToggleNode.isSelected())
+            buttonToggleNode.setSelected(false);
+    }
+    public void toggleNodeSelect(){
+        if(buttonTogglRoad.isSelected())
+            buttonTogglRoad.setSelected(false);
+    }
 
     public void dragDetectMap(Event event){
         Dragboard dragboard = mapMove.startDragAndDrop(TransferMode.MOVE);
@@ -67,10 +83,6 @@ public class Controller {
     }
     public void inputStreet(){
 
+    }
 
-    }
-    public void clicNode(MouseEvent event){
-        Circle circle = (Circle)event.getSource();
-        circle.setFill(Color.RED);
-    }
 }
