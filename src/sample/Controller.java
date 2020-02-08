@@ -27,6 +27,7 @@ public class Controller {
     public void importMap(){}
 
     public void mouseClickNode(MouseEvent event){
+        if(event.getButton().equals(MouseButton.PRIMARY))
         if(buttonToggleNode.isSelected()) {
             Point2D coord = new Point2D(event.getX(), event.getY());
         }
