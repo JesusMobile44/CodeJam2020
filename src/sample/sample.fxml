@@ -89,7 +89,7 @@
                         </children>
                      </HBox>
                      <Separator prefHeight="8.0" prefWidth="200.0" />
-                     <Button mnemonicParsing="false" prefHeight="85.0" prefWidth="316.0" text="Importer une Map">
+                     <Button mnemonicParsing="false" onAction="#importMap" prefHeight="85.0" prefWidth="316.0" text="Importer une Map">
                         <font>
                            <Font size="28.0" />
                         </font>

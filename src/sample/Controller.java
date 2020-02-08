@@ -44,7 +44,7 @@ public class Controller {
     public void mouseClickNode(MouseEvent event){
         if (event.getButton().equals(MouseButton.PRIMARY)){
             if(buttonToggleNode.isSelected()) {
-                Noeud noeud = new Noeud(buttonToggleNode,buttonTogglRoad,paneNoeuds);
+                Noeud noeud = new Noeud(buttonToggleNode,buttonTogglRoad,paneNoeuds,paneRues);
                 noeud.setX(event.getX()-16);
                 noeud.setY(event.getY()-16);
                 noeud.setImage(Main.imagesContainer.get(1));
