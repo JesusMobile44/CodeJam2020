@@ -8,7 +8,6 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.ToggleButton?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -26,10 +25,7 @@
             <center>
                <StackPane fx:id="mapMove" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onDragDetected="#dragDetectMap" onDragDone="#dragDoneMap" onDragDropped="#dragDropMap" onDragEntered="#dragEnteredMap" onDragExited="#dragExitMap" prefHeight="1054.0" prefWidth="1577.0" BorderPane.alignment="CENTER">
                   <children>
-                     <ImageView fitHeight="883.0" fitWidth="1584.0">
-                        <image>
-                           <Image url="@../../../../Pictures/Eglises%20jum.jpg" />
-                        </image>
+                     <ImageView fx:id="iv" fitHeight="883.0" fitWidth="1584.0">
                      </ImageView>
                      <Pane fx:id="pane" onMouseClicked="#mouseClickNode" />
                   </children>

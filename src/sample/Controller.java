@@ -66,18 +66,18 @@ public class Controller {
 
     public void dragDoneMap(){
 
-    }
+        }
 
-    public void dragDropMap(){
+        public void dragDropMap(){
 
-    }
+        }
 
-    public void dragEnteredMap(){
+        public void dragEnteredMap(){
 
 
-    }
+        }
 
-    public void dragExitMap(){
+        public void dragExitMap(){
 
 
     }
