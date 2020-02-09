@@ -25,6 +25,7 @@ import static sample.Noeud.textadd;
 
 public class Controller {
 
+
     @FXML
     public ImageView iv;
     @FXML
@@ -67,6 +68,10 @@ public class Controller {
                 paneNoeuds.getChildren().add(noeud);
             }
         }
+    }
+
+    public void close(){
+        Main.changerDeMode(0);
     }
 
     public void toggleRoadSelec(){
@@ -174,4 +179,5 @@ public class Controller {
 
         additionneur.set(0);
     }
+
 }

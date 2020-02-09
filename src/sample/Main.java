@@ -5,9 +5,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ToggleButton;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Main extends Application {
@@ -16,9 +19,12 @@ public class Main extends Application {
 
     public static int numeroMode;
 
+    public static int numeroRes;
+
     private static Scene[] scenes = new Scene[3];
 
     public static ArrayList<Image> imagesContainer = new ArrayList();
+    static Stage optStage = new Stage();
 
     public static boolean oneSelected = false;
     public static double x = 0;
@@ -30,10 +36,18 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{         //On utilise pas primaryStage, juste stage
         getScenes()[0] = FXMLLoader.load(getClass().getResource("menu.fxml"));
         getScenes()[1] = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        //getScenes()[2] = FXMLLoader.load(getClass().getResource("sample720p.fxml"));
+        getScenes()[2] = FXMLLoader.load(getClass().getResource("sample720p.fxml"));
+
+        Scene options = FXMLLoader.load(getClass().getResource("options.fxml"));
+        optStage.setScene(options);
+        numeroRes = 1;
+
 
         getScenes()[0].getStylesheets().add("modena_dark.css");
         getScenes()[1].getStylesheets().add("modena_dark.css");
+        getScenes()[2].getStylesheets().add("modena_dark.css");
+        options.getStylesheets().add("modena_dark.css");
+        primaryStage.setTitle("Déneigement et Pollution");
 
         initializeImage();
 
@@ -82,4 +96,15 @@ public class Main extends Application {
         stage.show();
     }
 
+    public static void startOptions(){
+        optStage.show();
+    }
+
+    public static void setNumeroRes(int numeroRes) {
+        Main.numeroRes = numeroRes;
+    }
+
+    public static int getNumeroRes() {
+        return numeroRes;
+    }
 }

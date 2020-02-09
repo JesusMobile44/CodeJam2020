@@ -45,6 +45,7 @@
                            <MenuItem mnemonicParsing="false" onAction="#importMap" text="Import Map" />
                            <MenuItem mnemonicParsing="false" onAction="#DeleteEverything" text="Reset" />
                        <MenuItem mnemonicParsing="false" text="Close" />
+                       <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
                      </items>
                    </Menu>
                    <Menu mnemonicParsing="false" text="Edit">
@@ -116,7 +117,7 @@
                                  <Insets />
                               </HBox.margin>
                            </Text>
-                           <Text fx:id="distanceText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="0 Km">
+                           <Text fx:id="distanceText" strokeType="OUTSIDE" strokeWidth="0.0" text="0 Km">
                               <font>
                                  <Font size="28.0" />
                               </font>
@@ -166,6 +167,11 @@
                                  </Text>
                               </children>
                            </HBox>
+                           <Text fx:id="distanceText1" strokeType="OUTSIDE" strokeWidth="0.0" text="0 L/100Km" textAlignment="RIGHT" wrappingWidth="311.193359375">
+                              <font>
+                                 <Font size="40.0" />
+                              </font>
+                           </Text>
                         </children>
                      </VBox>
                      <Separator prefHeight="8.0" prefWidth="319.0" />
