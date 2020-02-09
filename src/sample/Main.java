@@ -82,10 +82,6 @@ public class Main extends Application {
         return scenes;
     }
 
-    public static Stage getStage() {
-        return stage;
-    }
-
     public static void changerDeMode(int mode){
         stage.setScene(Main.getScenes()[mode]);
         stage.setResizable(true);

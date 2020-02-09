@@ -5,6 +5,7 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.*;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
@@ -31,6 +32,7 @@ public class Controller {
     @FXML
     public ImageView imageGratte;
 
+    int choix;
     public void importMap(){
         FileChooser fc = new FileChooser();
         fc.setTitle("Veuillez sélectionner un fichier");
@@ -39,7 +41,6 @@ public class Controller {
         iv.setImage(map);
     }
 
-    //UTILISER LE MOUSEDRAG
     double consommation = 0;
 
     @FXML
@@ -54,6 +55,7 @@ public class Controller {
     public Text distanceText1;
     public TextField tf;
     public Text consommationTotaleText;
+    public Text text;
 
     private int nbNoeudSelect = 0;
 
@@ -94,30 +96,16 @@ public class Controller {
     }
 
     public void changerGratte(){
-        /*
-        ImageView i1 = new ImageView(Main.imagesContainer.get(3));
-        i1.setScaleX(0.5);
-        i1.setScaleY(0.5);
-        ImageView i2 = new ImageView(Main.imagesContainer.get(4));
-        i2.setScaleX(0.5);
-        i2.setScaleY(0.5);
-        ImageView i3 = new ImageView(Main.imagesContainer.get(5));
-        i3.setScaleX(0.5);
-        i3.setScaleY(0.5);
-        ImageView i4 = new ImageView(Main.imagesContainer.get(6));
-        i4.setScaleX(0.5);
-        i4.setScaleY(0.5);
-        ImageView i5 = new ImageView(Main.imagesContainer.get(7));
-        i5.setScaleX(0.5);
-        i5.setScaleY(0.5);
-        ImageView[] iv = {i1,i2,i3,i4,i5};
-        ChoiceDialog<ImageView> alerte = new ChoiceDialog<ImageView>(iv[1],iv);
-        */
         Label choix1 = new Label("Chevaux deneigeur");
         Label choix2 = new Label("Gratte");
         Label choix3 = new Label("Grosse gratte");
         Label choix4 = new Label("Mini gratte");
         Label choix5 = new Label("Souffleur");
+        choix1.setTextFill(Color.BLACK);
+        choix2.setTextFill(Color.BLACK);
+        choix3.setTextFill(Color.BLACK);
+        choix4.setTextFill(Color.BLACK);
+        choix5.setTextFill(Color.BLACK);
         Label[] labels = {choix1,choix2,choix3,choix4,choix5};
         ChoiceDialog<Label> alerte = new ChoiceDialog(labels[1],labels);
 
@@ -125,6 +113,8 @@ public class Controller {
         alerte.setHeaderText("Veuillez choisir");
         alerte.setContentText("Votre choix: ");
         alerte.setResizable(true);
+        alerte.getSelectedItem().setTextFill(Color.BLACK);
+
         Image gratte = WhichGratte(alerte.showAndWait().get());
         imageGratte.setImage(gratte);
 
@@ -135,22 +125,27 @@ public class Controller {
             case "Chevaux deneigeur":
                 image = Main.imagesContainer.get(3);
                 consommation = 0;
+                choix=1;
                 break;
             case "Gratte":
                 image = Main.imagesContainer.get(4);
                 consommation = 20;
+                choix=2;
                 break;
             case "Grosse gratte":
                 image = Main.imagesContainer.get(5);
                 consommation = 30;
+                choix=3;
                 break;
             case "Mini gratte":
                 image = Main.imagesContainer.get(6);
                 consommation = 10;
+                choix=4;
                 break;
             case "Souffleur":
                 image = Main.imagesContainer.get(7);
-                consommation = 5;
+                consommation = 20;
+                choix=5;
                 break;
         }
         distanceText1.setText(consommation+" L/100Km");
@@ -166,6 +161,38 @@ public class Controller {
                 String ok1 = toString().valueOf(distance);
                 distanceText.setText(ok1);
             }
+            double duree=0;
+            int heure=0;
+            int minute=0;
+            switch (choix){
+                case 1:
+                    duree = ((distance/1000.0000000)/2);
+                    heure = (int)duree;
+                    minute = (int)((duree-heure)*60);
+                    break;
+                case 2:
+                    duree = ((distance/1000.00000)/35.00);
+                    heure = (int)duree;
+                    minute = (int)((duree-heure)*60);
+                    break;
+                case 3:
+                    duree = ((distance/1000.00)/45.00);
+                    heure = (int)duree;
+                    minute = (int)((duree-heure)*60);
+                    break;
+                case 4:
+                    duree = ((distance/1000.00)/15.00);
+                    heure = (int)duree;
+                    minute = (int)((duree-heure)*60);
+                    break;
+                case 5:
+                    duree = ((distance/1000.00)/20.00);
+                    heure = (int)duree;
+                    minute = (int)((duree-heure)*60);
+                    break;
+            }
+            text.setText("Le temps estimé est de: "+heure+"h et "+minute+" minutes.");
+
         } else {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setContentText("Veuillez entrer l'échelle de votre carte.");
