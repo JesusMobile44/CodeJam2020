@@ -1,16 +1,14 @@
 package sample;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.ContextMenu;
-import javafx.scene.control.MenuItem;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.*;
+import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
 import java.io.File;
 import javafx.event.Event;
-import javafx.scene.control.ToggleButton;
-import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 
@@ -18,6 +16,8 @@ public class Controller {
 
     @FXML
     public ImageView iv;
+    @FXML
+    public ImageView imageGratte;
 
     public void importMap(){
         FileChooser fc = new FileChooser();
@@ -86,7 +86,17 @@ public class Controller {
 
 
     }
-    public void inputStreet(){
+    public void changerGratte(){
+        ImageView i1 = new ImageView(new Image("image/chevaux deneigeur.jpg"));
+        ImageView i2 = new ImageView(new Image("image/gratte.png"));
+        ImageView i3 = new ImageView(new Image("image/grosse gratte.png"));
+        ImageView i4 = new ImageView(new Image("image/mini gratte.png"));
+        ImageView i5 = new ImageView(new Image("image/souffleur.png"));
+        ChoiceDialog<ImageView> alerte = new ChoiceDialog<ImageView>(i1,  i2, i3, i4,i5);
+        alerte.setTitle("Information importante");
+        alerte.setHeaderText("Veuillez choisir");
+        alerte.setContentText("Votre choix: ");
+        imageGratte.setImage(alerte.showAndWait().get().getImage());
 
     }
 
