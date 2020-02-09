@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24bb851f-c96d-40cd-90f1-4a066c08b56c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/modena.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Scenes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/sample720p.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/ControllerMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/ControllerMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modena_dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/modena_dark.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/ControllerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/ControllerMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/ControllerOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/ControllerOptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/options.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/options.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,43 +71,52 @@
       <option name="project" value="LOCAL" />
       <updated>1581194349934</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Options OK">
+      <created>1581226975470</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1581226975470</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit Para Ibar" />
     <MESSAGE value="Options pas fonct" />
-    <option name="LAST_COMMIT_MESSAGE" value="Options pas fonct" />
+    <MESSAGE value="Options OK" />
+    <option name="LAST_COMMIT_MESSAGE" value="Options OK" />
   </component>
   <component name="WindowStateProjectService">
     <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581226357717">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1581226357717" />
-    <state x="350" y="26" key="CommitChangelistDialog2" timestamp="1581194349473">
+    <state x="350" y="26" key="CommitChangelistDialog2" timestamp="1581226974969">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="350" y="26" key="CommitChangelistDialog2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1581194349473" />
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1581226891427">
+    <state x="350" y="26" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1581226974969" />
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1581227033672">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1581194296716" />
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1581226891427" />
-    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1581226891427">
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1581227033672" />
+    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1581227033672">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1581194296715" />
-    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1581226891427" />
-    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1581226891427">
+    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1581227033672" />
+    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1581227033671">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1581194296715" />
-    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1581226891427" />
-    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1581226891427">
+    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1581227033671" />
+    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1581227033672">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1581194296716" />
-    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1581226891427" />
+    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1581227033672" />
     <state width="1493" height="277" key="GridCell.Tab.1.bottom" timestamp="1581220908936">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -145,10 +141,11 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="481" y="148" key="MultipleFileMergeDialog/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1581183416041" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1581194361642">
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1581226994060">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1581194361642" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1581226994060" />
     <state x="480" y="223" key="git4idea.merge.GitPullDialog" timestamp="1581183407106">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
