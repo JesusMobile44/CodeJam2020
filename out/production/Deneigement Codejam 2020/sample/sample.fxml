@@ -81,7 +81,7 @@
                                  <Font size="28.0" />
                               </font>
                            </Text>
-                           <TextField prefHeight="66.0" prefWidth="140.0">
+                           <TextField fx:id="tf" prefHeight="66.0" prefWidth="140.0">
                               <font>
                                  <Font size="28.0" />
                               </font>
@@ -143,7 +143,7 @@
                         </children>
                      </VBox>
                      <Separator prefHeight="8.0" prefWidth="319.0" />
-                     <Button alignment="BOTTOM_CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="316.0" style="-fx-background-color: #28949c;" text="Simuler">
+                     <Button alignment="BOTTOM_CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#Simuler" prefHeight="86.0" prefWidth="316.0" style="-fx-background-color: #28949c;" text="Simuler">
                         <font>
                            <Font size="35.0" />
                         </font>

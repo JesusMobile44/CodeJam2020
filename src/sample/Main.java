@@ -42,7 +42,7 @@ public class Main extends Application {
 
         stage.setTitle("Déneigement et Pollution");
         stage.setResizable(true);
-        stage.setMaximized(false);
+        stage.setMaximized(true);
         stage.setMinHeight(650);
         stage.setMinWidth(650);
 

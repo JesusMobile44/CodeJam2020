@@ -1,23 +1,23 @@
 package sample;
 
-import javafx.scene.Scene;
-import javafx.scene.control.ContextMenu;
-import javafx.scene.control.MenuItem;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
+import javafx.scene.text.Text;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicLong;
 
 public class Noeud extends ImageView{
     HashMap<String,Rue> rues = new HashMap<>();
 
+   public static AtomicLong additionneur = new AtomicLong();
+    public static Text textadd = new Text();
     Tooltip tooltip;
     Boolean selected = false;
 
@@ -42,8 +42,9 @@ public class Noeud extends ImageView{
     public void setTooltip(Tooltip tooltip) {
         this.tooltip = tooltip;
     }
-    public double longueurDeLigne(Line trait){
-        double longueur = Math.sqrt(Math.pow(trait.getEndX()-trait.getStartX(),2)+Math.pow(trait.getEndY()-trait.getStartY(),2));
+    public long longueurDeLigne(Line trait){
+        long longueur = (long)(Math.sqrt(Math.pow(trait.getEndX()-trait.getStartX(),2)+Math.pow(trait.getEndY()-trait.getStartY(),2)));
+        additionneur.set(additionneur.get()+longueur);
         return longueur;
     }
 
