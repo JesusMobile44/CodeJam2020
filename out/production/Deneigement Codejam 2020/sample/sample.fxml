@@ -66,9 +66,9 @@
                <VBox alignment="BOTTOM_CENTER" minHeight="0.0" minWidth="0.0" prefHeight="1028.0" prefWidth="319.0" style="-fx-border-color: WHITE;">
                   <children>
                      <Separator prefHeight="8.0" prefWidth="200.0" />
-                     <ImageView fitHeight="268.0" fitWidth="317.0" pickOnBounds="true" preserveRatio="true" />
+                     <ImageView fx:id="imageGratte" fitHeight="268.0" fitWidth="317.0" pickOnBounds="true" preserveRatio="true" />
                      <Separator prefHeight="2.0" prefWidth="318.0" />
-                     <Button mnemonicParsing="false" prefHeight="85.0" prefWidth="316.0" text="Changer de Véhicule">
+                     <Button mnemonicParsing="false" onAction="#changerGratte" prefHeight="85.0" prefWidth="316.0" text="Changer de Véhicule">
                         <font>
                            <Font size="28.0" />
                         </font>
