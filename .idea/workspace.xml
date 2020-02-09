@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Deneigement Codejam 2020:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6e1ed25-e8f3-4fd2-b96f-da5bcaea344f" name="Default Changelist" comment="Options OK">
+    <list default="true" id="a6e1ed25-e8f3-4fd2-b96f-da5bcaea344f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Deneigement_Codejam_2020_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/Noeud.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/Noeud.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/ControllerOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/ControllerOptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Noeud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Noeud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Scenes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/ControllerOptions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/ControllerOptions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/Scenes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/menu.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +33,12 @@
   <component name="ProjectId" id="1XZuWHIFkxxUFlYJd23tiN2Y3h3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -105,7 +111,14 @@
       <option name="presentableId" value="Default" />
       <updated>1581265967431</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="VERSION FINALE V2">
+      <created>1581272555464</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1581272555464</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,7 +136,8 @@
     <MESSAGE value="Commit Para Ibar" />
     <MESSAGE value="Options pas fonct" />
     <MESSAGE value="Options OK" />
-    <option name="LAST_COMMIT_MESSAGE" value="Options OK" />
+    <MESSAGE value="VERSION FINALE V2" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERSION FINALE V2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" />
