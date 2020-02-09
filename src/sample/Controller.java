@@ -53,6 +53,10 @@ public class Controller {
         }
     }
 
+    public void close(){
+        Main.changerDeMode(0);
+    }
+
     public void toggleRoadSelec(){
         if(buttonToggleNode.isSelected())
             buttonToggleNode.setSelected(false);
@@ -60,32 +64,6 @@ public class Controller {
     public void toggleNodeSelect(){
         if(buttonTogglRoad.isSelected())
             buttonTogglRoad.setSelected(false);
-    }
-
-    public void dragDetectMap(Event event){
-        Dragboard dragboard = mapMove.startDragAndDrop(TransferMode.MOVE);
-        dragboard.setDragView(null);
-    }
-
-    public void dragDoneMap(){
-
-    }
-
-    public void dragDropMap(){
-
-    }
-
-    public void dragEnteredMap(){
-
-
-    }
-
-    public void dragExitMap(){
-
-
-    }
-    public void inputStreet(){
-
     }
 
 }

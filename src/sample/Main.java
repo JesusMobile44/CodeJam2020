@@ -5,6 +5,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ToggleButton;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
@@ -16,6 +18,8 @@ public class Main extends Application {
     private static Stage stage= new Stage();
 
     public static int numeroMode;
+
+    public static int numeroRes;
 
     private static Scene[] scenes = new Scene[3];
 
@@ -29,11 +33,15 @@ public class Main extends Application {
         getScenes()[1] = FXMLLoader.load(getClass().getResource("sample.fxml"));
         getScenes()[2] = FXMLLoader.load(getClass().getResource("sample720p.fxml"));
 
-        optStage.setScene(FXMLLoader.load(getClass().getResource("options.fxml")));
+        Scene options = FXMLLoader.load(getClass().getResource("options.fxml"));
+        optStage.setScene(options);
+        numeroRes = 1;
 
 
         getScenes()[0].getStylesheets().add("modena_dark.css");
         getScenes()[1].getStylesheets().add("modena_dark.css");
+        getScenes()[2].getStylesheets().add("modena_dark.css");
+        options.getStylesheets().add("modena_dark.css");
         primaryStage.setTitle("Déneigement et Pollution");
 
         initializeImage();
@@ -43,7 +51,7 @@ public class Main extends Application {
 
         stage.setTitle("Déneigement et Pollution");
         stage.setResizable(true);
-        stage.setMaximized(false);
+        stage.setMaximized(true);
         stage.setMinHeight(650);
         stage.setMinWidth(650);
 
@@ -82,4 +90,11 @@ public class Main extends Application {
         optStage.show();
     }
 
+    public static void setNumeroRes(int numeroRes) {
+        Main.numeroRes = numeroRes;
+    }
+
+    public static int getNumeroRes() {
+        return numeroRes;
+    }
 }

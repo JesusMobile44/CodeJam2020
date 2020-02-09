@@ -58,3 +58,7 @@
 .separator{
     -fx-background-color: DARKDARKGRAY;
 }
+
+.text{
+    -fx-text-fill: WHITE;
+}

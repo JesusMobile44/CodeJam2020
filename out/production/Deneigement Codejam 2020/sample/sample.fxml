@@ -25,7 +25,7 @@
       <children>
          <BorderPane layoutX="-41.599998474121094" prefHeight="1080.0" prefWidth="1920.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <center>
-               <StackPane fx:id="mapMove" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onDragDetected="#dragDetectMap" onDragDone="#dragDoneMap" onDragDropped="#dragDropMap" onDragEntered="#dragEnteredMap" onDragExited="#dragExitMap" prefHeight="1054.0" prefWidth="1577.0" BorderPane.alignment="CENTER">
+               <StackPane fx:id="mapMove" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1054.0" prefWidth="1577.0" BorderPane.alignment="CENTER">
                   <children>
                      <ImageView fx:id="iv" fitHeight="883.0" fitWidth="1584.0">
                         <image>
@@ -45,7 +45,7 @@
                            <MenuItem mnemonicParsing="false" text="Import Save" />
                            <MenuItem mnemonicParsing="false" text="Save" />
                            <MenuItem mnemonicParsing="false" onAction="#importMap" text="Import Map" />
-                       <MenuItem mnemonicParsing="false" text="Close" />
+                       <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
                      </items>
                    </Menu>
                    <Menu mnemonicParsing="false" text="Edit">
@@ -117,7 +117,7 @@
                                  <Insets />
                               </HBox.margin>
                            </Text>
-                           <Text fx:id="distanceText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="0 Km">
+                           <Text fx:id="distanceText" strokeType="OUTSIDE" strokeWidth="0.0" text="0 Km">
                               <font>
                                  <Font size="40.0" />
                               </font>
@@ -135,7 +135,7 @@
                                  <Font size="40.0" />
                               </font>
                            </Text>
-                           <Text fx:id="distanceText1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="0 L/100Km" textAlignment="RIGHT" wrappingWidth="311.193359375">
+                           <Text fx:id="distanceText1" strokeType="OUTSIDE" strokeWidth="0.0" text="0 L/100Km" textAlignment="RIGHT" wrappingWidth="311.193359375">
                               <font>
                                  <Font size="40.0" />
                               </font>
