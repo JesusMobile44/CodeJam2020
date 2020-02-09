@@ -39,6 +39,7 @@ public class Controller {
     }
 
     //UTILISER LE MOUSEDRAG
+    double consommation = 0;
 
     @FXML
     public StackPane mapMove;
@@ -51,6 +52,7 @@ public class Controller {
     public Text distanceText;
     public Text distanceText1;
     public TextField tf;
+    public Text consommationTotaleText;
 
     private int nbNoeudSelect = 0;
 
@@ -144,25 +146,26 @@ public class Controller {
         switch(label.getText()) {
             case "Chevaux deneigeur":
                 image = Main.imagesContainer.get(3);
-                distanceText1.setText("0 L/100Km");
+                consommation = 0;
                 break;
             case "Gratte":
                 image = Main.imagesContainer.get(4);
-                distanceText1.setText("10 L/100Km");
+                consommation = 20;
                 break;
             case "Grosse gratte":
                 image = Main.imagesContainer.get(5);
-                distanceText1.setText("20 L/100Km");
+                consommation = 30;
                 break;
             case "Mini gratte":
                 image = Main.imagesContainer.get(6);
-                distanceText1.setText("30 L/100Km");
+                consommation = 10;
                 break;
             case "Souffleur":
                 image = Main.imagesContainer.get(7);
-                distanceText1.setText("40 L/100Km");
+                consommation = 5;
                 break;
         }
+        distanceText1.setText(consommation+" L/100Km");
         return image;
     }
     public void Simuler() {
@@ -170,6 +173,7 @@ public class Controller {
         if (!tf.getText().equals("")) {
             var = Float.parseFloat(tf.getText());
             float distance = (var * additionneur.get() / 1600);
+            consommationTotaleText.setText((consommation*distance)+" mL");
             if (additionneur.get() != 0) {
                 String ok1 = toString().valueOf(distance);
                 distanceText.setText(ok1);
