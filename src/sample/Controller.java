@@ -168,7 +168,7 @@ public class Controller {
             }
         } else {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setContentText("Veuillez entrer la distance de votre map svp!");
+            alert.setContentText("Veuillez entrer l'échelle de votre carte.");
             alert.showAndWait();
         }
     }
