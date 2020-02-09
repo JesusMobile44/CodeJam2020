@@ -26,6 +26,11 @@ public class Main extends Application {
     public static ArrayList<Image> imagesContainer = new ArrayList();
     static Stage optStage = new Stage();
 
+    public static boolean oneSelected = false;
+    public static double x = 0;
+    public static double y = 0;
+    public static Noeud tempNode;
+
 
     @Override
     public void start(Stage primaryStage) throws Exception{         //On utilise pas primaryStage, juste stage
