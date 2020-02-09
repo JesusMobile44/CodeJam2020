@@ -41,14 +41,14 @@ public class Main extends Application {
         getScenes()[1].getStylesheets().add("modena_dark.css");
         getScenes()[2].getStylesheets().add("modena_dark.css");
         options.getStylesheets().add("modena_dark.css");
-        primaryStage.setTitle("Déneigement et Pollution");
+        primaryStage.setTitle("Pelle-T");
 
         initializeImage();
 
         numeroMode = 0;
         stage.setScene(getScenes()[numeroMode]);
 
-        stage.setTitle("Déneigement et Pollution");
+        stage.setTitle("Pelle-T");
         stage.setResizable(true);
         stage.setMaximized(true);
         stage.setMinHeight(650);

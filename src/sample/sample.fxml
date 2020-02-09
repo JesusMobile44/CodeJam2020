@@ -48,7 +48,7 @@
                            <MenuItem mnemonicParsing="false" text="Save" />
                            <MenuItem mnemonicParsing="false" onAction="#importMap" text="Import Map" />
                            <MenuItem mnemonicParsing="false" onAction="#DeleteEverything" text="Reset" />
-                       <MenuItem mnemonicParsing="false" text="Close" />
+                       <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
                      </items>
                    </Menu>
                    <Menu mnemonicParsing="false" text="Edit">
@@ -163,7 +163,7 @@
                                        <Font size="28.0" />
                                     </font>
                                  </Text>
-                                 <Text fx:id="consommationTotaleText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="0 L" textAlignment="RIGHT" wrappingWidth="185.5934600830078">
+                                 <Text fx:id="consommationTotaleText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="0 ml" textAlignment="RIGHT" wrappingWidth="185.5934600830078">
                                     <font>
                                        <Font size="28.0" />
                                     </font>
