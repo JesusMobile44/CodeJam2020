@@ -28,9 +28,6 @@
                <StackPane fx:id="mapMove" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onDragDetected="#dragDetectMap" onDragDone="#dragDoneMap" onDragDropped="#dragDropMap" onDragEntered="#dragEnteredMap" onDragExited="#dragExitMap" prefHeight="1054.0" prefWidth="1577.0" BorderPane.alignment="CENTER">
                   <children>
                      <ImageView fx:id="iv" fitHeight="883.0" fitWidth="1584.0">
-                        <image>
-                           <Image url="@../../../../Pictures/Eglises%20jum.jpg" />
-                        </image>
                      </ImageView>
                      <Pane fx:id="paneRues" />
                      <Pane fx:id="paneNoeuds" onMouseClicked="#mouseClickNode" />
@@ -45,6 +42,7 @@
                            <MenuItem mnemonicParsing="false" text="Import Save" />
                            <MenuItem mnemonicParsing="false" text="Save" />
                            <MenuItem mnemonicParsing="false" onAction="#importMap" text="Import Map" />
+                           <MenuItem mnemonicParsing="false" onAction="#DeleteEverything" text="Reset" />
                        <MenuItem mnemonicParsing="false" text="Close" />
                      </items>
                    </Menu>

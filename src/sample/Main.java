@@ -53,6 +53,11 @@ public class Main extends Application {
         imagesContainer.add(new Image("image/imageNode.png"));
         imagesContainer.add(new Image("image/imageNodeBleu.png"));
         imagesContainer.add(new Image("image/imageNodeRouge.png"));
+        imagesContainer.add(new Image("image/chevaux deneigeur.png"));
+        imagesContainer.add(new Image("image/gratte.png"));
+        imagesContainer.add(new Image("image/grosse gratte.png"));
+        imagesContainer.add(new Image("image/mini gratte.png"));
+        imagesContainer.add(new Image("image/souffleur.png"));
     }
 
     public static void main(String[] args) {
