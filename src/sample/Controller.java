@@ -88,23 +88,6 @@ public class Controller {
         dragboard.setDragView(null);
     }
 
-    public void dragDoneMap(){
-
-        }
-
-        public void dragDropMap(){
-
-        }
-
-        public void dragEnteredMap(){
-
-
-        }
-
-        public void dragExitMap(){
-
-
-    }
     public void changerGratte(){
         /*
         ImageView i1 = new ImageView(Main.imagesContainer.get(3));
