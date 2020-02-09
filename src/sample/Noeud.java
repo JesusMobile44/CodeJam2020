@@ -16,7 +16,7 @@ import java.util.concurrent.atomic.AtomicLong;
 public class Noeud extends ImageView{
     HashMap<String,Rue> rues = new HashMap<>();
 
-   public static AtomicLong additionneur = new AtomicLong();
+    public static AtomicLong additionneur = new AtomicLong();
     public static Text textadd = new Text();
     Tooltip tooltip;
     Boolean selected = false;
