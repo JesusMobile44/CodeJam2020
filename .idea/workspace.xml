@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6e1ed25-e8f3-4fd2-b96f-da5bcaea344f" name="Default Changelist" comment="">
+    <list default="true" id="a6e1ed25-e8f3-4fd2-b96f-da5bcaea344f" name="Default Changelist" comment="Options OK">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/modena_dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/modena_dark.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/ControllerMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/ControllerMenu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/Maison.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/Noeud.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/Noeud.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/Rue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/Rue.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Deneigement Codejam 2020/sample/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modena_dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/modena_dark.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/ControllerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/ControllerMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/ControllerOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/ControllerOptions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Maison.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Noeud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Noeud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Rue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Rue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Scenes.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectId" id="1XZuWHIFkxxUFlYJd23tiN2Y3h3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -102,8 +98,26 @@
       <option name="project" value="LOCAL" />
       <updated>1581227307316</updated>
     </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a6e1ed25-e8f3-4fd2-b96f-da5bcaea344f" name="Default Changelist" comment="" />
+      <created>1581265967431</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581265967431</updated>
+    </task>
     <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit Para Ibar" />

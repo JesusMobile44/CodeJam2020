@@ -6,29 +6,25 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Text;
-
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
 public class Noeud extends ImageView{
+
     public static AtomicLong additionneur = new AtomicLong();
     public static Text textadd = new Text();
     Boolean selected = false;
-
     public ArrayList<Rue> ruesParNoeud = new ArrayList<>();
-
     public ArrayList<Rue> getRuesParNoeud() {
         return ruesParNoeud;
     }
-
-
+    //pythagore de la rue pour savoir la longueur
     public long longueurDeLigne(Line trait){
         long longueur = (long)(Math.sqrt(Math.pow(trait.getEndX()-trait.getStartX(),2)+Math.pow(trait.getEndY()-trait.getStartY(),2)));
         additionneur.set(additionneur.get()+longueur);
         return longueur;
     }
-
+    //Constructor de noeud
     Noeud(ToggleButton buttonToggleNode,ToggleButton buttonToggleRoad, Pane paneN, Pane paneR){
         this.setOnMouseClicked(event -> {
             if (buttonToggleNode.isSelected() && event.getButton().equals(MouseButton.SECONDARY)) {
@@ -39,11 +35,11 @@ public class Noeud extends ImageView{
             }
         });
     }
-
+    //delete les childrens
     public void delete(Pane paneN){
         paneN.getChildren().remove(this);
     }
-
+    //Select node
     public void select(Pane paneR){
         if (!this.selected) {
             this.selected = true;

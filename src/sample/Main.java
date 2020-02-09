@@ -1,21 +1,15 @@
 package sample;
 
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ToggleButton;
-import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class Main extends Application {
 
-    private static Stage stage= new Stage();
+    public static Stage stage= new Stage();
 
     public static int numeroMode;
 
@@ -73,15 +67,13 @@ public class Main extends Application {
         imagesContainer.add(new Image("image/mini gratte.png"));
         imagesContainer.add(new Image("image/souffleur.png"));
     }
-
     public static void main(String[] args) {
         launch(args);
     }
-
     public static Scene[] getScenes() {
         return scenes;
     }
-
+    //changer de mode
     public static void changerDeMode(int mode){
         stage.setScene(Main.getScenes()[mode]);
         stage.setResizable(true);
@@ -91,15 +83,12 @@ public class Main extends Application {
         stage.hide();
         stage.show();
     }
-
     public static void startOptions(){
         optStage.show();
     }
-
     public static void setNumeroRes(int numeroRes) {
         Main.numeroRes = numeroRes;
     }
-
     public static int getNumeroRes() {
         return numeroRes;
     }

@@ -7,20 +7,13 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
-import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
 import java.io.File;
-import java.text.DecimalFormat;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.regex.Pattern;
-
 import javafx.event.Event;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
-import jdk.nashorn.internal.ir.Labels;
-
 import static sample.Noeud.additionneur;
 import static sample.Noeud.textadd;
 
@@ -57,9 +50,7 @@ public class Controller {
     public Text consommationTotaleText;
     public Text text;
 
-    private int nbNoeudSelect = 0;
-
-
+    //poser un noeud
     public void mouseClickNode(MouseEvent event){
         if (event.getButton().equals(MouseButton.PRIMARY)){
             if(buttonToggleNode.isSelected()) {
@@ -71,7 +62,7 @@ public class Controller {
             }
         }
     }
-
+    //retour au menu principal
     public void close(){
         Main.changerDeMode(0);
     }
@@ -89,12 +80,7 @@ public class Controller {
             buttonTogglRoad.setSelected(false);
         }
     }
-
-    public void dragDetectMap(Event event){
-        Dragboard dragboard = mapMove.startDragAndDrop(TransferMode.MOVE);
-        dragboard.setDragView(null);
-    }
-
+    //Choisir la gratte
     public void changerGratte(){
         Label choix1 = new Label("Chevaux deneigeur");
         Label choix2 = new Label("Gratte");
@@ -119,6 +105,7 @@ public class Controller {
         imageGratte.setImage(gratte);
 
     }
+    //Choisir carac gratte
     public Image WhichGratte(Label label) {
         Image image = Main.imagesContainer.get(3);
         switch(label.getText()) {
@@ -151,6 +138,7 @@ public class Controller {
         distanceText1.setText(consommation+" L/100Km");
         return image;
     }
+    //Bouton qui lance les calculs à effectuer
     public void Simuler() {
         float var = 0;
         if (!tf.getText().equals("")) {
@@ -166,27 +154,27 @@ public class Controller {
             int minute=0;
             switch (choix){
                 case 1:
-                    duree = ((distance/1000.0000000)/2);
+                    duree = ((distance/1000.0000000)/2.00);
                     heure = (int)duree;
                     minute = (int)((duree-heure)*60);
                     break;
                 case 2:
-                    duree = ((distance/1000.00000)/35.00);
+                    duree = ((distance/1000.00000)/18.00);
                     heure = (int)duree;
                     minute = (int)((duree-heure)*60);
                     break;
                 case 3:
-                    duree = ((distance/1000.00)/45.00);
+                    duree = ((distance/1000.00)/25.00);
                     heure = (int)duree;
                     minute = (int)((duree-heure)*60);
                     break;
                 case 4:
-                    duree = ((distance/1000.00)/15.00);
+                    duree = ((distance/1000.00)/9.00);
                     heure = (int)duree;
                     minute = (int)((duree-heure)*60);
                     break;
                 case 5:
-                    duree = ((distance/1000.00)/20.00);
+                    duree = ((distance/1000.00)/13.00);
                     heure = (int)duree;
                     minute = (int)((duree-heure)*60);
                     break;
@@ -199,11 +187,11 @@ public class Controller {
             alert.showAndWait();
         }
     }
+    //Refresh
     public void DeleteEverything(){
         paneNoeuds.getChildren().clear();
         paneRues.getChildren().clear();
         distanceText.setText("0");
-
         additionneur.set(0);
     }
 
